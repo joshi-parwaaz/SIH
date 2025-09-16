@@ -1,0 +1,81 @@
+# Model B Configuration
+app:
+  name: "Ocean Hazard Prediction Model"
+  version: "1.0.0"
+  debug: false
+  
+api:
+  host: "0.0.0.0"
+  port: 8002
+  workers: 4
+
+database:
+  mongodb:
+    host: "localhost"
+    port: 27017
+    database: "ocean_hazards_prediction"
+  
+prediction:
+  update_interval_hours: 6
+  forecast_hours: 72
+  risk_threshold:
+    low: 0.3
+    medium: 0.6
+    high: 0.8
+
+models:
+  lstm:
+    sequence_length: 24
+    hidden_units: 128
+    epochs: 100
+    batch_size: 32
+  
+  random_forest:
+    n_estimators: 100
+    max_depth: 10
+    random_state: 42
+  
+  xgboost:
+    n_estimators: 100
+    learning_rate: 0.1
+    max_depth: 6
+
+features:
+  temporal:
+    - hour_of_day
+    - day_of_week
+    - month
+    - season
+    - time_since_last_event
+  
+  spatial:
+    - latitude
+    - longitude
+    - coastal_vulnerability_index
+    - population_density
+    - distance_to_shore
+  
+  environmental:
+    - sea_level
+    - wave_height
+    - wind_speed
+    - rainfall
+    - temperature
+    - pressure
+
+data_sources:
+  weather_api:
+    base_url: "https://api.openweathermap.org/data/2.5"
+    api_key: "${WEATHER_API_KEY}"
+  
+  sensor_data:
+    buoy_api: "https://buoy-data-api.incois.gov.in"
+    refresh_interval: 300  # seconds
+  
+  historical_data:
+    path: "data/historical_events.csv"
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/model_b.log"
