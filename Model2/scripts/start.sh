@@ -32,9 +32,17 @@ LOG_LEVEL=INFO
 API_HOST=0.0.0.0
 API_PORT=8000
 
-# Database Configuration
-MONGODB_URI=mongodb://admin:ocean_hazard_2024@mongo:27017/ocean_hazard_db?authSource=admin
-REDIS_URL=redis://:ocean_hazard_2024@redis:6379/0
+# Database Configuration (CHANGE THESE PASSWORDS!)
+MONGO_ROOT_USERNAME=admin
+MONGO_ROOT_PASSWORD=your_secure_mongo_password_here
+MONGO_DATABASE=ocean_hazard_db
+REDIS_PASSWORD=your_secure_redis_password_here
+MONGODB_URI=mongodb://admin:\${MONGO_ROOT_PASSWORD}@mongo:27017/ocean_hazard_db?authSource=admin
+REDIS_URL=redis://:\${REDIS_PASSWORD}@redis:6379/0
+
+# Service Passwords (CHANGE THESE!)
+GRAFANA_PASSWORD=your_secure_grafana_password_here
+JUPYTER_TOKEN=your_secure_jupyter_token_here
 
 # API Keys (replace with actual keys)
 WEATHER_API_KEY=your_weather_api_key_here
@@ -87,10 +95,11 @@ echo ""
 echo "=== Ocean Hazard Prediction System Started ==="
 echo "API Documentation: http://localhost:8000/docs"
 echo "API Health Check: http://localhost:8000/health"
-echo "Grafana Dashboard: http://localhost:3000 (admin/ocean_hazard_2024)"
-echo "Jupyter Notebook: http://localhost:8888 (token: ocean_hazard_2024)"
+echo "Grafana Dashboard: http://localhost:3000 (admin/[check .env file])"
+echo "Jupyter Notebook: http://localhost:8888 (token: [check .env file])"
 echo "Prometheus: http://localhost:9090"
 echo ""
+echo "IMPORTANT: Change default passwords in .env file before production use!"
 echo "To view logs: docker-compose logs -f"
 echo "To stop system: ./scripts/stop.sh"
 echo "================================================"

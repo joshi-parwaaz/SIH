@@ -68,9 +68,9 @@ services:
     ports:
       - "27017:27017"
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=admin
-      - MONGO_INITDB_ROOT_PASSWORD=ocean_hazard_2024
-      - MONGO_INITDB_DATABASE=ocean_hazard_db
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USERNAME:-admin}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD:-change_this_password}
+      - MONGO_INITDB_DATABASE=${MONGO_DATABASE:-ocean_hazard_db}
     volumes:
       - mongo_data:/data/db
       - ./scripts/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
@@ -84,7 +84,7 @@ services:
     container_name: ocean-hazard-redis
     ports:
       - "6379:6379"
-    command: redis-server --appendonly yes --requirepass ocean_hazard_2024
+    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD:-change_this_password}
     volumes:
       - redis_data:/data
     networks:
@@ -135,7 +135,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - GF_SECURITY_ADMIN_PASSWORD=ocean_hazard_2024
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD:-change_this_password}
       - GF_USERS_ALLOW_SIGN_UP=false
     volumes:
       - grafana_data:/var/lib/grafana
@@ -157,12 +157,12 @@ services:
       - "8888:8888"
     environment:
       - JUPYTER_ENABLE_LAB=yes
-      - JUPYTER_TOKEN=ocean_hazard_2024
+      - JUPYTER_TOKEN=${JUPYTER_TOKEN:-change_this_token}
     volumes:
       - .:/app
       - ./notebooks:/app/notebooks
       - ./data:/app/data
-    command: ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token='ocean_hazard_2024'"]
+    command: ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token='${JUPYTER_TOKEN:-change_this_token}'"]
     depends_on:
       - mongo
       - redis

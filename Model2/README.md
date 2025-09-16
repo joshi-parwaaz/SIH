@@ -87,8 +87,8 @@ chmod +x scripts/start.sh
 
 - **API Documentation**: http://localhost:8000/docs
 - **Health Check**: http://localhost:8000/health
-- **Grafana Dashboard**: http://localhost:3000 (admin/ocean_hazard_2024)
-- **Jupyter Notebook**: http://localhost:8888 (token: ocean_hazard_2024)
+- **Grafana Dashboard**: http://localhost:3000 (admin/[see .env file])
+- **Jupyter Notebook**: http://localhost:8888 (token: [see .env file])
 
 ## 📖 Documentation
 

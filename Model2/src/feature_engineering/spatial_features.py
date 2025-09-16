@@ -45,4 +45,348 @@ class SpatialFeatureExtractor:
         # Distance from prime meridian
         df['distance_from_prime_meridian'] = np.abs(df['longitude'])
         
-        return df\n    \n    def extract_coastal_features(self, coordinates: pd.DataFrame, \n                               coastline_data: Optional[gpd.GeoDataFrame] = None) -> pd.DataFrame:\n        \"\"\"Extract features related to coastal proximity and characteristics.\"\"\"\n        df = pd.DataFrame()\n        \n        if coastline_data is not None:\n            # Calculate distance to nearest coastline\n            distances_to_coast = []\n            coastal_orientations = []\n            \n            for _, row in coordinates.iterrows():\n                point = Point(row['longitude'], row['latitude'])\n                \n                # Find nearest coastline segment\n                min_distance = float('inf')\n                nearest_orientation = 0\n                \n                for _, coast_segment in coastline_data.iterrows():\n                    distance = point.distance(coast_segment.geometry)\n                    if distance < min_distance:\n                        min_distance = distance\n                        # Calculate orientation (simplified)\n                        nearest_orientation = self._calculate_orientation(coast_segment.geometry)\n                \n                distances_to_coast.append(min_distance * 111)  # Convert to km\n                coastal_orientations.append(nearest_orientation)\n            \n            df['distance_to_coast'] = distances_to_coast\n            df['coastal_orientation'] = coastal_orientations\n        else:\n            # Use simplified coastal proximity estimation\n            df['distance_to_coast'] = self._estimate_coastal_distance(coordinates)\n            df['coastal_orientation'] = np.random.uniform(0, 360, len(coordinates))  # Placeholder\n        \n        # Coastal exposure indicators\n        df['is_coastal'] = (df['distance_to_coast'] <= 10).astype(int)  # Within 10km\n        df['is_very_coastal'] = (df['distance_to_coast'] <= 1).astype(int)  # Within 1km\n        \n        # Coastal vulnerability based on distance\n        df['coastal_vulnerability'] = np.exp(-df['distance_to_coast'] / 20)  # Exponential decay\n        \n        return df\n    \n    def _estimate_coastal_distance(self, coordinates: pd.DataFrame) -> np.ndarray:\n        \"\"\"Estimate distance to coast using simplified model for Indian coastline.\"\"\"\n        distances = []\n        \n        # Simplified Indian coastline boundaries\n        west_coast_lon = 73.0  # Approximate western coastline\n        east_coast_lon = 80.0  # Approximate eastern coastline\n        south_coast_lat = 8.0  # Southern tip\n        \n        for _, row in coordinates.iterrows():\n            lat, lon = row['latitude'], row['longitude']\n            \n            # Calculate distance to nearest coast\n            if lon < west_coast_lon:  # West of west coast\n                dist_to_west = (west_coast_lon - lon) * 111 * np.cos(np.radians(lat))\n                distances.append(dist_to_west)\n            elif lon > east_coast_lon:  # East of east coast\n                dist_to_east = (lon - east_coast_lon) * 111 * np.cos(np.radians(lat))\n                distances.append(dist_to_east)\n            elif lat < south_coast_lat:  # South of southern coast\n                dist_to_south = (south_coast_lat - lat) * 111\n                distances.append(dist_to_south)\n            else:\n                # Inland - estimate based on terrain\n                inland_distance = min(\n                    abs(lon - west_coast_lon) * 111 * np.cos(np.radians(lat)),\n                    abs(lon - east_coast_lon) * 111 * np.cos(np.radians(lat))\n                )\n                distances.append(inland_distance)\n        \n        return np.array(distances)\n    \n    def _calculate_orientation(self, geometry) -> float:\n        \"\"\"Calculate orientation of a coastline segment.\"\"\"\n        coords = list(geometry.coords)\n        if len(coords) >= 2:\n            x1, y1 = coords[0]\n            x2, y2 = coords[-1]\n            angle = np.arctan2(y2 - y1, x2 - x1)\n            return np.degrees(angle) % 360\n        return 0\n    \n    def extract_elevation_features(self, coordinates: pd.DataFrame,\n                                 elevation_data: Optional[pd.DataFrame] = None) -> pd.DataFrame:\n        \"\"\"Extract elevation and topographic features.\"\"\"\n        df = pd.DataFrame()\n        \n        if elevation_data is not None and 'elevation' in elevation_data.columns:\n            df['elevation'] = elevation_data['elevation']\n        else:\n            # Estimate elevation based on distance from coast and latitude\n            coastal_dist = self._estimate_coastal_distance(coordinates)\n            df['elevation'] = np.maximum(0, coastal_dist * 0.5 + np.random.normal(0, 10, len(coordinates)))\n        \n        # Elevation-based features\n        df['elevation_log'] = np.log1p(df['elevation'])\n        df['is_lowland'] = (df['elevation'] <= 10).astype(int)\n        df['is_highland'] = (df['elevation'] >= 100).astype(int)\n        \n        # Topographic vulnerability (lower elevation = higher vulnerability)\n        df['topographic_vulnerability'] = 1 / (1 + df['elevation'] / 10)\n        \n        # Slope estimation (simplified)\n        if len(coordinates) > 1:\n            df['estimated_slope'] = np.abs(np.gradient(df['elevation']))\n        else:\n            df['estimated_slope'] = 0\n        \n        return df\n    \n    def extract_distance_features(self, coordinates: pd.DataFrame,\n                                reference_points: Dict[str, Tuple[float, float]]) -> pd.DataFrame:\n        \"\"\"Extract distance features to important reference points.\"\"\"\n        df = pd.DataFrame()\n        \n        for ref_name, (ref_lat, ref_lon) in reference_points.items():\n            distances = []\n            \n            for _, row in coordinates.iterrows():\n                distance = self._haversine_distance(\n                    row['latitude'], row['longitude'], ref_lat, ref_lon\n                )\n                distances.append(distance)\n            \n            df[f'distance_to_{ref_name}'] = distances\n            df[f'log_distance_to_{ref_name}'] = np.log1p(distances)\n        \n        return df\n    \n    def _haversine_distance(self, lat1: float, lon1: float, \n                           lat2: float, lon2: float) -> float:\n        \"\"\"Calculate haversine distance between two points.\"\"\"\n        R = 6371  # Earth's radius in km\n        \n        dlat = np.radians(lat2 - lat1)\n        dlon = np.radians(lon2 - lon1)\n        \n        a = (np.sin(dlat/2)**2 + \n             np.cos(np.radians(lat1)) * np.cos(np.radians(lat2)) * np.sin(dlon/2)**2)\n        c = 2 * np.arcsin(np.sqrt(a))\n        \n        return R * c\n    \n    def extract_clustering_features(self, coordinates: pd.DataFrame,\n                                  eps: float = 0.1, min_samples: int = 5) -> pd.DataFrame:\n        \"\"\"Extract spatial clustering features.\"\"\"\n        df = pd.DataFrame()\n        \n        if len(coordinates) < min_samples:\n            # Not enough points for clustering\n            df['cluster_id'] = -1\n            df['cluster_size'] = 0\n            df['is_cluster_core'] = 0\n            df['distance_to_cluster_center'] = 0\n            return df\n        \n        # Normalize coordinates for clustering\n        coords_normalized = self.scaler.fit_transform(\n            coordinates[['latitude', 'longitude']]\n        )\n        \n        # Perform DBSCAN clustering\n        clustering = DBSCAN(eps=eps, min_samples=min_samples)\n        cluster_labels = clustering.fit_predict(coords_normalized)\n        \n        df['cluster_id'] = cluster_labels\n        \n        # Calculate cluster-based features\n        cluster_sizes = []\n        is_core_points = []\n        distances_to_centers = []\n        \n        for i, label in enumerate(cluster_labels):\n            if label == -1:  # Noise point\n                cluster_sizes.append(0)\n                is_core_points.append(0)\n                distances_to_centers.append(np.inf)\n            else:\n                # Cluster size\n                cluster_size = np.sum(cluster_labels == label)\n                cluster_sizes.append(cluster_size)\n                \n                # Core point check\n                is_core = i in clustering.core_sample_indices_\n                is_core_points.append(int(is_core))\n                \n                # Distance to cluster center\n                cluster_points = coords_normalized[cluster_labels == label]\n                cluster_center = np.mean(cluster_points, axis=0)\n                distance_to_center = np.linalg.norm(\n                    coords_normalized[i] - cluster_center\n                )\n                distances_to_centers.append(distance_to_center)\n        \n        df['cluster_size'] = cluster_sizes\n        df['is_cluster_core'] = is_core_points\n        df['distance_to_cluster_center'] = distances_to_centers\n        \n        # Cluster density\n        df['cluster_density'] = df['cluster_size'] / (df['distance_to_cluster_center'] + 1e-8)\n        \n        return df\n    \n    def extract_neighborhood_features(self, coordinates: pd.DataFrame,\n                                    radius_km: float = 50) -> pd.DataFrame:\n        \"\"\"Extract neighborhood-based spatial features.\"\"\"\n        df = pd.DataFrame()\n        \n        neighbor_counts = []\n        avg_neighbor_distances = []\n        neighbor_densities = []\n        \n        for i, row_i in coordinates.iterrows():\n            distances_to_others = []\n            \n            for j, row_j in coordinates.iterrows():\n                if i != j:\n                    distance = self._haversine_distance(\n                        row_i['latitude'], row_i['longitude'],\n                        row_j['latitude'], row_j['longitude']\n                    )\n                    if distance <= radius_km:\n                        distances_to_others.append(distance)\n            \n            # Neighborhood statistics\n            neighbor_count = len(distances_to_others)\n            avg_distance = np.mean(distances_to_others) if distances_to_others else 0\n            density = neighbor_count / (np.pi * radius_km**2)  # Points per km²\n            \n            neighbor_counts.append(neighbor_count)\n            avg_neighbor_distances.append(avg_distance)\n            neighbor_densities.append(density)\n        \n        df['neighbor_count'] = neighbor_counts\n        df['avg_neighbor_distance'] = avg_neighbor_distances\n        df['neighborhood_density'] = neighbor_densities\n        \n        # Neighborhood isolation indicator\n        df['is_isolated'] = (df['neighbor_count'] == 0).astype(int)\n        df['is_dense_area'] = (df['neighborhood_density'] > np.median(df['neighborhood_density'])).astype(int)\n        \n        return df\n    \n    def extract_geometric_features(self, coordinates: pd.DataFrame) -> pd.DataFrame:\n        \"\"\"Extract geometric features from coordinate patterns.\"\"\"\n        df = pd.DataFrame()\n        \n        if len(coordinates) < 3:\n            # Not enough points for geometric features\n            return pd.DataFrame(index=coordinates.index)\n        \n        # Centroid of all points\n        centroid_lat = coordinates['latitude'].mean()\n        centroid_lon = coordinates['longitude'].mean()\n        \n        # Distance from centroid\n        distances_from_centroid = []\n        for _, row in coordinates.iterrows():\n            distance = self._haversine_distance(\n                row['latitude'], row['longitude'],\n                centroid_lat, centroid_lon\n            )\n            distances_from_centroid.append(distance)\n        \n        df['distance_from_centroid'] = distances_from_centroid\n        \n        # Angular position relative to centroid\n        angles_from_centroid = []\n        for _, row in coordinates.iterrows():\n            angle = np.arctan2(\n                row['latitude'] - centroid_lat,\n                row['longitude'] - centroid_lon\n            )\n            angles_from_centroid.append(np.degrees(angle) % 360)\n        \n        df['angle_from_centroid'] = angles_from_centroid\n        \n        # Convert to cyclical features\n        angle_rad = np.radians(df['angle_from_centroid'])\n        df['angle_sin'] = np.sin(angle_rad)\n        df['angle_cos'] = np.cos(angle_rad)\n        \n        # Spatial spread indicators\n        lat_range = coordinates['latitude'].max() - coordinates['latitude'].min()\n        lon_range = coordinates['longitude'].max() - coordinates['longitude'].min()\n        \n        df['latitude_spread'] = lat_range\n        df['longitude_spread'] = lon_range\n        df['spatial_spread'] = np.sqrt(lat_range**2 + lon_range**2)\n        \n        return df\n    \n    def create_spatial_feature_matrix(self, coordinates: pd.DataFrame,\n                                    coastline_data: Optional[gpd.GeoDataFrame] = None,\n                                    elevation_data: Optional[pd.DataFrame] = None,\n                                    reference_points: Optional[Dict] = None) -> pd.DataFrame:\n        \"\"\"Create comprehensive spatial feature matrix.\"\"\"\n        \n        logger.info(\"Creating spatial feature matrix...\")\n        \n        # Basic coordinate features\n        coord_features = self.extract_coordinate_features(coordinates)\n        \n        # Coastal features\n        coastal_features = self.extract_coastal_features(coordinates, coastline_data)\n        \n        # Elevation features\n        elevation_features = self.extract_elevation_features(coordinates, elevation_data)\n        \n        # Combine basic features\n        feature_matrix = pd.concat([\n            coord_features, coastal_features, elevation_features\n        ], axis=1)\n        \n        # Distance features to reference points\n        if reference_points:\n            distance_features = self.extract_distance_features(coordinates, reference_points)\n            feature_matrix = pd.concat([feature_matrix, distance_features], axis=1)\n        \n        # Clustering features (if enough points)\n        if len(coordinates) >= 10:\n            clustering_features = self.extract_clustering_features(coordinates)\n            feature_matrix = pd.concat([feature_matrix, clustering_features], axis=1)\n        \n        # Neighborhood features\n        if len(coordinates) >= 5:\n            neighborhood_features = self.extract_neighborhood_features(coordinates)\n            feature_matrix = pd.concat([feature_matrix, neighborhood_features], axis=1)\n        \n        # Geometric features\n        if len(coordinates) >= 3:\n            geometric_features = self.extract_geometric_features(coordinates)\n            feature_matrix = pd.concat([feature_matrix, geometric_features], axis=1)\n        \n        # Store feature names\n        self.feature_names = feature_matrix.columns.tolist()\n        \n        logger.info(f\"Created {len(self.feature_names)} spatial features\")\n        \n        return feature_matrix
+        return df
+    
+    def extract_coastal_features(self, coordinates: pd.DataFrame, 
+                               coastline_data: Optional[gpd.GeoDataFrame] = None) -> pd.DataFrame:
+        """Extract features related to coastal proximity and characteristics."""
+        df = pd.DataFrame()
+        
+        if coastline_data is not None:
+            # Calculate distance to nearest coastline
+            distances_to_coast = []
+            coastal_orientations = []
+            
+            for _, row in coordinates.iterrows():
+                point = Point(row['longitude'], row['latitude'])
+                
+                # Find nearest coastline segment
+                min_distance = float('inf')
+                nearest_orientation = 0
+                
+                for _, coast_segment in coastline_data.iterrows():
+                    distance = point.distance(coast_segment.geometry)
+                    if distance < min_distance:
+                        min_distance = distance
+                        # Calculate orientation (simplified)
+                        nearest_orientation = self._calculate_orientation(coast_segment.geometry)
+                
+                distances_to_coast.append(min_distance * 111)  # Convert to km
+                coastal_orientations.append(nearest_orientation)
+            
+            df['distance_to_coast'] = distances_to_coast
+            df['coastal_orientation'] = coastal_orientations
+        else:
+            # Use simplified coastal proximity estimation
+            df['distance_to_coast'] = self._estimate_coastal_distance(coordinates)
+            df['coastal_orientation'] = np.random.uniform(0, 360, len(coordinates))  # Placeholder
+        
+        # Coastal exposure indicators
+        df['is_coastal'] = (df['distance_to_coast'] <= 10).astype(int)  # Within 10km
+        df['is_very_coastal'] = (df['distance_to_coast'] <= 1).astype(int)  # Within 1km
+        
+        # Coastal vulnerability based on distance
+        df['coastal_vulnerability'] = np.exp(-df['distance_to_coast'] / 20)  # Exponential decay
+        
+        return df
+    
+    def _estimate_coastal_distance(self, coordinates: pd.DataFrame) -> np.ndarray:
+        """Estimate distance to coast using simplified model for Indian coastline."""
+        distances = []
+        
+        # Simplified Indian coastline boundaries
+        west_coast_lon = 73.0  # Approximate western coastline
+        east_coast_lon = 80.0  # Approximate eastern coastline
+        south_coast_lat = 8.0  # Southern tip
+        
+        for _, row in coordinates.iterrows():
+            lat, lon = row['latitude'], row['longitude']
+            
+            # Calculate distance to nearest coast
+            if lon < west_coast_lon:  # West of west coast
+                dist_to_west = (west_coast_lon - lon) * 111 * np.cos(np.radians(lat))
+                distances.append(dist_to_west)
+            elif lon > east_coast_lon:  # East of east coast
+                dist_to_east = (lon - east_coast_lon) * 111 * np.cos(np.radians(lat))
+                distances.append(dist_to_east)
+            elif lat < south_coast_lat:  # South of southern coast
+                dist_to_south = (south_coast_lat - lat) * 111
+                distances.append(dist_to_south)
+            else:
+                # Inland - estimate based on terrain
+                inland_distance = min(
+                    abs(lon - west_coast_lon) * 111 * np.cos(np.radians(lat)),
+                    abs(lon - east_coast_lon) * 111 * np.cos(np.radians(lat))
+                )
+                distances.append(inland_distance)
+        
+        return np.array(distances)
+    
+    def _calculate_orientation(self, geometry) -> float:
+        """Calculate orientation of a coastline segment."""
+        coords = list(geometry.coords)
+        if len(coords) >= 2:
+            x1, y1 = coords[0]
+            x2, y2 = coords[-1]
+            angle = np.arctan2(y2 - y1, x2 - x1)
+            return np.degrees(angle) % 360
+        return 0
+    
+    def extract_elevation_features(self, coordinates: pd.DataFrame,
+                                 elevation_data: Optional[pd.DataFrame] = None) -> pd.DataFrame:
+        """Extract elevation and topographic features."""
+        df = pd.DataFrame()
+        
+        if elevation_data is not None and 'elevation' in elevation_data.columns:
+            df['elevation'] = elevation_data['elevation']
+        else:
+            # Estimate elevation based on distance from coast and latitude
+            coastal_dist = self._estimate_coastal_distance(coordinates)
+            df['elevation'] = np.maximum(0, coastal_dist * 0.5 + np.random.normal(0, 10, len(coordinates)))
+        
+        # Elevation-based features
+        df['elevation_log'] = np.log1p(df['elevation'])
+        df['is_lowland'] = (df['elevation'] <= 10).astype(int)
+        df['is_highland'] = (df['elevation'] >= 100).astype(int)
+        
+        # Topographic vulnerability (lower elevation = higher vulnerability)
+        df['topographic_vulnerability'] = 1 / (1 + df['elevation'] / 10)
+        
+        # Slope estimation (simplified)
+        if len(coordinates) > 1:
+            df['estimated_slope'] = np.abs(np.gradient(df['elevation']))
+        else:
+            df['estimated_slope'] = 0
+        
+        return df
+    
+    def extract_distance_features(self, coordinates: pd.DataFrame,
+                                reference_points: Dict[str, Tuple[float, float]]) -> pd.DataFrame:
+        """Extract distance features to important reference points."""
+        df = pd.DataFrame()
+        
+        for ref_name, (ref_lat, ref_lon) in reference_points.items():
+            distances = []
+            
+            for _, row in coordinates.iterrows():
+                distance = self._haversine_distance(
+                    row['latitude'], row['longitude'], ref_lat, ref_lon
+                )
+                distances.append(distance)
+            
+            df[f'distance_to_{ref_name}'] = distances
+            df[f'log_distance_to_{ref_name}'] = np.log1p(distances)
+        
+        return df
+    
+    def _haversine_distance(self, lat1: float, lon1: float, 
+                           lat2: float, lon2: float) -> float:
+        """Calculate haversine distance between two points."""
+        R = 6371  # Earth's radius in km
+        
+        dlat = np.radians(lat2 - lat1)
+        dlon = np.radians(lon2 - lon1)
+        
+        a = (np.sin(dlat/2)**2 + 
+             np.cos(np.radians(lat1)) * np.cos(np.radians(lat2)) * np.sin(dlon/2)**2)
+        c = 2 * np.arcsin(np.sqrt(a))
+        
+        return R * c
+    
+    def extract_clustering_features(self, coordinates: pd.DataFrame,
+                                  eps: float = 0.1, min_samples: int = 5) -> pd.DataFrame:
+        """Extract spatial clustering features."""
+        df = pd.DataFrame()
+        
+        if len(coordinates) < min_samples:
+            # Not enough points for clustering
+            df['cluster_id'] = -1
+            df['cluster_size'] = 0
+            df['is_cluster_core'] = 0
+            df['distance_to_cluster_center'] = 0
+            return df
+        
+        # Normalize coordinates for clustering
+        coords_normalized = self.scaler.fit_transform(
+            coordinates[['latitude', 'longitude']]
+        )
+        
+        # Perform DBSCAN clustering
+        clustering = DBSCAN(eps=eps, min_samples=min_samples)
+        cluster_labels = clustering.fit_predict(coords_normalized)
+        
+        df['cluster_id'] = cluster_labels
+        
+        # Calculate cluster-based features
+        cluster_sizes = []
+        is_core_points = []
+        distances_to_centers = []
+        
+        for i, label in enumerate(cluster_labels):
+            if label == -1:  # Noise point
+                cluster_sizes.append(0)
+                is_core_points.append(0)
+                distances_to_centers.append(np.inf)
+            else:
+                # Cluster size
+                cluster_size = np.sum(cluster_labels == label)
+                cluster_sizes.append(cluster_size)
+                
+                # Core point check
+                is_core = i in clustering.core_sample_indices_
+                is_core_points.append(int(is_core))
+                
+                # Distance to cluster center
+                cluster_points = coords_normalized[cluster_labels == label]
+                cluster_center = np.mean(cluster_points, axis=0)
+                distance_to_center = np.linalg.norm(
+                    coords_normalized[i] - cluster_center
+                )
+                distances_to_centers.append(distance_to_center)
+        
+        df['cluster_size'] = cluster_sizes
+        df['is_cluster_core'] = is_core_points
+        df['distance_to_cluster_center'] = distances_to_centers
+        
+        # Cluster density
+        df['cluster_density'] = df['cluster_size'] / (df['distance_to_cluster_center'] + 1e-8)
+        
+        return df
+    
+    def extract_neighborhood_features(self, coordinates: pd.DataFrame,
+                                    radius_km: float = 50) -> pd.DataFrame:
+        """Extract neighborhood-based spatial features."""
+        df = pd.DataFrame()
+        
+        neighbor_counts = []
+        avg_neighbor_distances = []
+        neighbor_densities = []
+        
+        for i, row_i in coordinates.iterrows():
+            distances_to_others = []
+            
+            for j, row_j in coordinates.iterrows():
+                if i != j:
+                    distance = self._haversine_distance(
+                        row_i['latitude'], row_i['longitude'],
+                        row_j['latitude'], row_j['longitude']
+                    )
+                    if distance <= radius_km:
+                        distances_to_others.append(distance)
+            
+            # Neighborhood statistics
+            neighbor_count = len(distances_to_others)
+            avg_distance = np.mean(distances_to_others) if distances_to_others else 0
+            density = neighbor_count / (np.pi * radius_km**2)  # Points per km²
+            
+            neighbor_counts.append(neighbor_count)
+            avg_neighbor_distances.append(avg_distance)
+            neighbor_densities.append(density)
+        
+        df['neighbor_count'] = neighbor_counts
+        df['avg_neighbor_distance'] = avg_neighbor_distances
+        df['neighborhood_density'] = neighbor_densities
+        
+        # Neighborhood isolation indicator
+        df['is_isolated'] = (df['neighbor_count'] == 0).astype(int)
+        df['is_dense_area'] = (df['neighborhood_density'] > np.median(df['neighborhood_density'])).astype(int)
+        
+        return df
+    
+    def extract_geometric_features(self, coordinates: pd.DataFrame) -> pd.DataFrame:
+        """Extract geometric features from coordinate patterns."""
+        df = pd.DataFrame()
+        
+        if len(coordinates) < 3:
+            # Not enough points for geometric features
+            return pd.DataFrame(index=coordinates.index)
+        
+        # Centroid of all points
+        centroid_lat = coordinates['latitude'].mean()
+        centroid_lon = coordinates['longitude'].mean()
+        
+        # Distance from centroid
+        distances_from_centroid = []
+        for _, row in coordinates.iterrows():
+            distance = self._haversine_distance(
+                row['latitude'], row['longitude'],
+                centroid_lat, centroid_lon
+            )
+            distances_from_centroid.append(distance)
+        
+        df['distance_from_centroid'] = distances_from_centroid
+        
+        # Angular position relative to centroid
+        angles_from_centroid = []
+        for _, row in coordinates.iterrows():
+            angle = np.arctan2(
+                row['latitude'] - centroid_lat,
+                row['longitude'] - centroid_lon
+            )
+            angles_from_centroid.append(np.degrees(angle) % 360)
+        
+        df['angle_from_centroid'] = angles_from_centroid
+        
+        # Convert to cyclical features
+        angle_rad = np.radians(df['angle_from_centroid'])
+        df['angle_sin'] = np.sin(angle_rad)
+        df['angle_cos'] = np.cos(angle_rad)
+        
+        # Spatial spread indicators
+        lat_range = coordinates['latitude'].max() - coordinates['latitude'].min()
+        lon_range = coordinates['longitude'].max() - coordinates['longitude'].min()
+        
+        df['latitude_spread'] = lat_range
+        df['longitude_spread'] = lon_range
+        df['spatial_spread'] = np.sqrt(lat_range**2 + lon_range**2)
+        
+        return df
+    
+    def create_spatial_feature_matrix(self, coordinates: pd.DataFrame,
+                                    coastline_data: Optional[gpd.GeoDataFrame] = None,
+                                    elevation_data: Optional[pd.DataFrame] = None,
+                                    reference_points: Optional[Dict] = None) -> pd.DataFrame:
+        """Create comprehensive spatial feature matrix."""
+        
+        logger.info("Creating spatial feature matrix...")
+        
+        # Basic coordinate features
+        coord_features = self.extract_coordinate_features(coordinates)
+        
+        # Coastal features
+        coastal_features = self.extract_coastal_features(coordinates, coastline_data)
+        
+        # Elevation features
+        elevation_features = self.extract_elevation_features(coordinates, elevation_data)
+        
+        # Combine basic features
+        feature_matrix = pd.concat([
+            coord_features, coastal_features, elevation_features
+        ], axis=1)
+        
+        # Distance features to reference points
+        if reference_points:
+            distance_features = self.extract_distance_features(coordinates, reference_points)
+            feature_matrix = pd.concat([feature_matrix, distance_features], axis=1)
+        
+        # Clustering features (if enough points)
+        if len(coordinates) >= 10:
+            clustering_features = self.extract_clustering_features(coordinates)
+            feature_matrix = pd.concat([feature_matrix, clustering_features], axis=1)
+        
+        # Neighborhood features
+        if len(coordinates) >= 5:
+            neighborhood_features = self.extract_neighborhood_features(coordinates)
+            feature_matrix = pd.concat([feature_matrix, neighborhood_features], axis=1)
+        
+        # Geometric features
+        if len(coordinates) >= 3:
+            geometric_features = self.extract_geometric_features(coordinates)
+            feature_matrix = pd.concat([feature_matrix, geometric_features], axis=1)
+        
+        # Store feature names
+        self.feature_names = feature_matrix.columns.tolist()
+        
+        logger.info(f"Created {len(self.feature_names)} spatial features")
+        
+        return feature_matrix
