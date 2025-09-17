@@ -4,7 +4,7 @@ from typing import List, Dict, Any, Optional
 from datetime import datetime, timedelta
 from dataclasses import asdict
 from ..data_ingestion import DataSource, RawReport
-from ...config import config
+from config import config
 
 class UserReportsSource(DataSource):
     """User reports data source for citizen-submitted hazard reports"""

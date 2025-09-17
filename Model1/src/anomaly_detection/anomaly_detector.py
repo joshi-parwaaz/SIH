@@ -28,7 +28,7 @@ from ..data_ingestion import RawReport
 from ..preprocessing import ProcessedReport
 from ..nlp_analysis import HazardPrediction
 from ..geolocation import GeolocationResult
-from ...config import config
+from config import config
 
 @dataclass
 class AnomalyAlert:

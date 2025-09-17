@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 import json
 import re
 from ..data_ingestion import DataSource, RawReport
-from ...config import config
+from config import config
 
 class GovernmentAlertsSource(DataSource):
     """Government alerts data source for official hazard warnings"""

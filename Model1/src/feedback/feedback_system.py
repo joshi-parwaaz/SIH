@@ -16,7 +16,7 @@ from ..preprocessing import ProcessedReport
 from ..nlp_analysis import HazardPrediction
 from ..geolocation import GeolocationResult
 from ..anomaly_detection import AnomalyAlert
-from ...config import config
+from config import config
 
 class FeedbackType(Enum):
     """Types of feedback"""

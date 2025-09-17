@@ -24,7 +24,7 @@ except:
     pass
 
 from ..data_ingestion import RawReport
-from ...config import config
+from config import config
 
 @dataclass
 class ProcessedReport:

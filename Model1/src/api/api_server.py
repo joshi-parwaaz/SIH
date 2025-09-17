@@ -16,7 +16,7 @@ from ..nlp_analysis import NLPAnalysisEngine, HazardPrediction
 from ..geolocation import GeolocationExtractor, GeolocationResult
 from ..anomaly_detection import AnomalyDetectionEngine, AnomalyAlert
 from ..feedback import FeedbackIntegrationSystem, FeedbackType, FeedbackAction
-from ...config import config
+from config import config
 
 # Global instances
 ml_pipeline = None

@@ -17,7 +17,7 @@ from transformers import (
 from textblob import TextBlob
 
 from ..preprocessing import ProcessedReport
-from ...config import config
+from config import config
 
 @dataclass
 class HazardPrediction:

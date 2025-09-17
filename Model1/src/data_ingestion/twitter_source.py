@@ -3,7 +3,7 @@ import asyncio
 from typing import List, Dict, Any
 from datetime import datetime, timedelta
 from ..data_ingestion import DataSource, RawReport
-from ...config import config
+from config import config
 
 class TwitterDataSource(DataSource):
     """Twitter data source for hazard-related tweets"""

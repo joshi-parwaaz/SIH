@@ -16,7 +16,7 @@ from transformers import AutoTokenizer, AutoModelForTokenClassification, pipelin
 
 from ..preprocessing import ProcessedReport
 from ..nlp_analysis import HazardPrediction
-from ...config import config
+from config import config
 
 @dataclass
 class LocationEntity:
