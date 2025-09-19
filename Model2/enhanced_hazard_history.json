@@ -1,0 +1,12 @@
+{
+  "events": [],
+  "geographic_clusters": {},
+  "temporal_patterns": {},
+  "source_reliability": {},
+  "hazard_baselines": {
+    "heavy_rain": 0.10666666666666667,
+    "unknown": 0.09833333333333334
+  },
+  "last_updated": "2025-09-19T20:17:06.298340",
+  "anomaly_log": []
+}

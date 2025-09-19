@@ -1,0 +1,41 @@
+# Production Disaster Management System
+# Clean dependencies for SIH deployment
+
+# Web scraping and HTTP requests
+requests>=2.31.0
+urllib3>=2.0.0
+beautifulsoup4>=4.12.0
+
+# FastAPI and ASGI server
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.4.0
+
+# Machine Learning and NLP
+transformers>=4.35.0
+torch>=2.1.0
+sentencepiece>=0.1.99
+scikit-learn>=1.3.0
+Pillow>=10.0.0
+
+# Data processing
+pandas>=2.1.0
+numpy>=1.24.0
+
+# Geographic and mapping libraries
+geopy>=2.4.0
+
+# XML and HTML parsing
+lxml>=4.9.0
+
+# Logging and utilities
+python-multipart>=0.0.6
+
+# Development and testing
+pytest>=7.4.0
+
+# Environment management
+python-dotenv>=1.0.0
+
+# Transformers dependency
+protobuf>=4.0.0

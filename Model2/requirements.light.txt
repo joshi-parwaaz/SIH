@@ -1,0 +1,40 @@
+# Lightweight Production Requirements
+# Essential dependencies only - no heavy ML packages
+
+# Web scraping and HTTP requests
+requests>=2.31.0
+urllib3>=2.0.0
+beautifulsoup4>=4.12.0
+
+# FastAPI and ASGI server
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.4.0
+
+# Data processing (lightweight)
+pandas>=2.1.0
+numpy>=1.24.0
+
+# Geographic libraries
+geopy>=2.4.0
+
+# XML and HTML parsing
+lxml>=4.9.0
+
+# Multipart form data
+python-multipart>=0.0.6
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# Basic image processing (lightweight alternative to Pillow)
+Pillow>=10.0.0
+
+# Lightweight ML alternative (much smaller than torch/transformers)
+scikit-learn>=1.3.0
+
+# Testing (optional)
+pytest>=7.4.0
+
+# Note: Heavy ML packages (torch, transformers, sentencepiece) are excluded
+# The system will fall back to simpler classification methods

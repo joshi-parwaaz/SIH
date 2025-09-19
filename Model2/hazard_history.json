@@ -1,0 +1,2204 @@
+{
+  "events": [
+    {
+      "timestamp": "2025-09-18T10:29:47.328957",
+      "hazard_type": "tsunami",
+      "location": "coastal_area",
+      "severity": "medium",
+      "source": "Twitter",
+      "confidence": 0.9999999999999999
+    },
+    {
+      "timestamp": "2025-09-18T10:29:47.328957",
+      "hazard_type": "tsunami",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "Twitter",
+      "confidence": 0.8999999999999999
+    },
+    {
+      "timestamp": "2025-09-18T10:29:47.328957",
+      "hazard_type": "tsunami",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "Twitter",
+      "confidence": 0.7
+    },
+    {
+      "timestamp": "2025-09-18T10:36:44.819485",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-18T10:36:44.819485",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-18T10:36:44.819485",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-18T10:40:58.781855",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-18T10:40:58.781855",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-18T10:40:58.781855",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T11:05:43.440321",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T11:05:43.440321",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T11:05:43.440321",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T11:06:49.104521",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T11:06:49.104521",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T11:06:49.104521",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:44:40.987012",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:44:40.987012",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:44:40.987012",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:44:40.987012",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:44:40.987012",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:44:40.987012",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:44:40.987012",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:44:40.987012",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:44:40.987012",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:44:40.987012",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:44:40.987012",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:53:06.961803",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:53:06.961803",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:53:06.961803",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:53:06.961803",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:53:06.961803",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:53:06.961803",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:53:06.961803",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:53:06.961803",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:53:06.961803",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:53:06.961803",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:53:06.961803",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:53:06.961803",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:53:06.961803",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:53:06.961803",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:53:06.961803",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:53:06.961803",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:53:06.961803",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T15:53:06.961803",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:08:05.217756",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:08:05.217756",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:08:05.217756",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:08:05.217756",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:08:05.217756",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:08:05.217756",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:08:05.217756",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:08:05.217756",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:08:05.217756",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:08:05.217756",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:08:05.217756",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:08:05.217756",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:08:05.217756",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:08:05.217756",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:08:05.217756",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:08:05.217756",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:08:05.217756",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:08:05.217756",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:08:05.217756",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:08:05.217756",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:08:05.217756",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:14:41.773857",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:15:02.458186",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T16:59:35.967158",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:06:04.653888",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:06:04.653888",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:06:04.653888",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:06:04.653888",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:06:04.653888",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:06:04.653888",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:06:04.653888",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:06:04.653888",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:06:04.653888",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:06:04.653888",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:06:04.653888",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:06:04.653888",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:06:04.653888",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:06:04.653888",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:06:04.653888",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:06:04.653888",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:06:04.653888",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:06:04.653888",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:06:04.653888",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:06:04.653888",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:06:04.653888",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:06:04.653888",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:06:04.653888",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:06:04.653888",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:06:04.653888",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:06:04.653888",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:06:04.653888",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    },
+    {
+      "timestamp": "2025-09-19T17:10:07.071537",
+      "hazard_type": "unknown",
+      "location": "unknown",
+      "severity": "medium",
+      "source": "unknown",
+      "confidence": 0.5
+    }
+  ],
+  "region_counts": {
+    "coastal_area": [
+      "2025-09-18T10:29:47.328957"
+    ],
+    "unknown": [
+      "2025-09-18T10:29:47.328957",
+      "2025-09-18T10:29:47.328957",
+      "2025-09-18T10:36:44.819485",
+      "2025-09-18T10:36:44.819485",
+      "2025-09-18T10:36:44.819485",
+      "2025-09-18T10:40:58.781855",
+      "2025-09-18T10:40:58.781855",
+      "2025-09-18T10:40:58.781855",
+      "2025-09-19T11:05:43.440321",
+      "2025-09-19T11:05:43.440321",
+      "2025-09-19T11:05:43.440321",
+      "2025-09-19T11:06:49.104521",
+      "2025-09-19T11:06:49.104521",
+      "2025-09-19T11:06:49.104521",
+      "2025-09-19T15:44:40.987012",
+      "2025-09-19T15:44:40.987012",
+      "2025-09-19T15:44:40.987012",
+      "2025-09-19T15:44:40.987012",
+      "2025-09-19T15:44:40.987012",
+      "2025-09-19T15:44:40.987012",
+      "2025-09-19T15:44:40.987012",
+      "2025-09-19T15:44:40.987012",
+      "2025-09-19T15:44:40.987012",
+      "2025-09-19T15:44:40.987012",
+      "2025-09-19T15:44:40.987012",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537"
+    ]
+  },
+  "hazard_type_counts": {
+    "tsunami": [
+      "2025-09-18T10:29:47.328957",
+      "2025-09-18T10:29:47.328957",
+      "2025-09-18T10:29:47.328957"
+    ],
+    "unknown": [
+      "2025-09-18T10:36:44.819485",
+      "2025-09-18T10:36:44.819485",
+      "2025-09-18T10:36:44.819485",
+      "2025-09-18T10:40:58.781855",
+      "2025-09-18T10:40:58.781855",
+      "2025-09-18T10:40:58.781855",
+      "2025-09-19T11:05:43.440321",
+      "2025-09-19T11:05:43.440321",
+      "2025-09-19T11:05:43.440321",
+      "2025-09-19T11:06:49.104521",
+      "2025-09-19T11:06:49.104521",
+      "2025-09-19T11:06:49.104521",
+      "2025-09-19T15:44:40.987012",
+      "2025-09-19T15:44:40.987012",
+      "2025-09-19T15:44:40.987012",
+      "2025-09-19T15:44:40.987012",
+      "2025-09-19T15:44:40.987012",
+      "2025-09-19T15:44:40.987012",
+      "2025-09-19T15:44:40.987012",
+      "2025-09-19T15:44:40.987012",
+      "2025-09-19T15:44:40.987012",
+      "2025-09-19T15:44:40.987012",
+      "2025-09-19T15:44:40.987012",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T15:53:06.961803",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:08:05.217756",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:14:41.773857",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:15:02.458186",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T16:59:35.967158",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:06:04.653888",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537",
+      "2025-09-19T17:10:07.071537"
+    ]
+  },
+  "hourly_patterns": {
+    "10": 9,
+    "11": 6,
+    "15": 29,
+    "16": 117,
+    "17": 57
+  },
+  "last_updated": "2025-09-19T17:10:07.072559"
+}

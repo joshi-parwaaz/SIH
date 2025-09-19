@@ -1,0 +1,130 @@
+{
+  "verified_images": {
+    "4f2b8819aad399f0429f4f1f757dbd4b": {
+      "content_hash": "4f2b8819aad399f0429f4f1f757dbd4b",
+      "text_length": 168,
+      "source": "INCOIS",
+      "source_credibility": 0.95,
+      "source_type": "government",
+      "authenticity_score": 0.8699999999999999,
+      "is_likely_misinformation": false,
+      "confidence": 0.95,
+      "misinformation_indicators": [
+        {
+          "pattern": "vague_content",
+          "confidence": 0.4,
+          "description": "Content lacks specific verifiable details"
+        }
+      ],
+      "image_analysis": {},
+      "urls_found": [],
+      "verification_timestamp": "2025-09-19T20:17:06.300082",
+      "risk_level": "low",
+      "recommendations": [
+        "\ud83d\udccb Content contains potential misinformation patterns",
+        "\u2705 Content appears authentic from reliable source",
+        "\ud83c\udfdb\ufe0f Always verify disaster information with official authorities"
+      ]
+    },
+    "bc1555fd1d9f9fda13b5c951a613b3ed": {
+      "content_hash": "bc1555fd1d9f9fda13b5c951a613b3ed",
+      "text_length": 126,
+      "source": "INCOIS",
+      "source_credibility": 0.95,
+      "source_type": "government",
+      "authenticity_score": 0.8699999999999999,
+      "is_likely_misinformation": false,
+      "confidence": 0.95,
+      "misinformation_indicators": [
+        {
+          "pattern": "vague_content",
+          "confidence": 0.4,
+          "description": "Content lacks specific verifiable details"
+        }
+      ],
+      "image_analysis": {},
+      "urls_found": [],
+      "verification_timestamp": "2025-09-19T20:17:06.300911",
+      "risk_level": "low",
+      "recommendations": [
+        "\ud83d\udccb Content contains potential misinformation patterns",
+        "\u2705 Content appears authentic from reliable source",
+        "\ud83c\udfdb\ufe0f Always verify disaster information with official authorities"
+      ]
+    },
+    "eec82e5ed524028bfc3f29af2f917adf": {
+      "content_hash": "eec82e5ed524028bfc3f29af2f917adf",
+      "text_length": 143,
+      "source": "INCOIS",
+      "source_credibility": 0.95,
+      "source_type": "government",
+      "authenticity_score": 0.8699999999999999,
+      "is_likely_misinformation": false,
+      "confidence": 0.95,
+      "misinformation_indicators": [
+        {
+          "pattern": "vague_content",
+          "confidence": 0.4,
+          "description": "Content lacks specific verifiable details"
+        }
+      ],
+      "image_analysis": {},
+      "urls_found": [],
+      "verification_timestamp": "2025-09-19T20:17:06.302117",
+      "risk_level": "low",
+      "recommendations": [
+        "\ud83d\udccb Content contains potential misinformation patterns",
+        "\u2705 Content appears authentic from reliable source",
+        "\ud83c\udfdb\ufe0f Always verify disaster information with official authorities"
+      ]
+    },
+    "34e0ec382faa77831d4b9bda8d6ec96e": {
+      "content_hash": "34e0ec382faa77831d4b9bda8d6ec96e",
+      "text_length": 132,
+      "source": "INCOIS",
+      "source_credibility": 0.95,
+      "source_type": "government",
+      "authenticity_score": 0.8699999999999999,
+      "is_likely_misinformation": false,
+      "confidence": 0.95,
+      "misinformation_indicators": [
+        {
+          "pattern": "vague_content",
+          "confidence": 0.4,
+          "description": "Content lacks specific verifiable details"
+        }
+      ],
+      "image_analysis": {},
+      "urls_found": [],
+      "verification_timestamp": "2025-09-19T20:17:06.303089",
+      "risk_level": "low",
+      "recommendations": [
+        "\ud83d\udccb Content contains potential misinformation patterns",
+        "\u2705 Content appears authentic from reliable source",
+        "\ud83c\udfdb\ufe0f Always verify disaster information with official authorities"
+      ]
+    },
+    "1105f2b9c36ea46ce8acccff840bb97d": {
+      "content_hash": "1105f2b9c36ea46ce8acccff840bb97d",
+      "text_length": 80,
+      "source": "Google_News",
+      "source_credibility": 0.85,
+      "source_type": "trusted_news",
+      "authenticity_score": 0.85,
+      "is_likely_misinformation": false,
+      "confidence": 0.95,
+      "misinformation_indicators": [],
+      "image_analysis": {},
+      "urls_found": [],
+      "verification_timestamp": "2025-09-19T20:17:06.303924",
+      "risk_level": "low",
+      "recommendations": [
+        "\u2705 Content appears authentic from reliable source",
+        "\ud83c\udfdb\ufe0f Always verify disaster information with official authorities"
+      ]
+    }
+  },
+  "misinformation_database": {},
+  "source_reliability_scores": {},
+  "last_updated": "2025-09-19T20:17:06.303943"
+}
